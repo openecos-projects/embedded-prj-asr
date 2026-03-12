@@ -1,0 +1,492 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x00000000         0x01000000         axrl!w
+RAM              0x30000000         0x00020000         axw!rl
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x00000000    0x2d80c
+                0x00000000                        . = ALIGN (0x4)
+ *(.text)
+ .text          0x00000000       0xd8 /tmp/ccHdlMlF.o
+ .text          0x000000d8      0x9d8 /tmp/cc4Ff3yb.o
+                0x000009a0                SPI_Get
+                0x000009e0                ADC_read
+                0x00000a38                adc_init
+ .text          0x00000ab0        0x0 /tmp/cckWkpLX.o
+ .text          0x00000ab0       0x7c /tmp/cc3oZzJz.o
+                0x00000ab0                delay_us
+                0x00000ae4                delay_ms
+                0x00000af0                delay_s
+                0x00000afc                sys_tick_init
+                0x00000b1c                get_sys_tick
+ .text          0x00000b2c       0x48 /tmp/ccKNCyPl.o
+                0x00000b2c                __lshrdi3
+ .text          0x00000b74       0x28 /tmp/cciq4Q0C.o
+                0x00000b74                __mulsi3
+ .text          0x00000b9c      0x13c /tmp/ccVqiP2I.o
+                0x00000b9c                gpio_config
+                0x00000c5c                gpio_set_direction
+                0x00000c8c                gpio_set_level
+                0x00000cc0                gpio_get_level
+                0x00000cd4                gpio_set_function
+ .text          0x00000cd8      0x384 /tmp/ccL7iCJM.o
+                0x00000e48                vprintf
+                0x00001020                printf
+ .text          0x0000105c       0x60 /tmp/cc3nKGuy.o
+                0x0000105c                memcpy
+                0x00001080                memset
+                0x0000109c                strlen
+ .text          0x000010bc       0x6c /tmp/ccZKTwx0.o
+                0x000010bc                pwm_init
+                0x000010dc                pwm_set_compare
+ .text          0x00001128      0x14c /tmp/cco372am.o
+                0x00001128                hp_uart_init
+                0x00001160                hp_uart_config
+                0x000011b8                hp_uart_send
+                0x000011d8                hp_uart_send_str
+                0x0000120c                hp_uart_recv
+                0x00001230                hp_uart_recv_str
+ .text          0x00001274       0x3c /tmp/ccsp4re1.o
+                0x00001274                sys_uart_init
+                0x00001284                sys_putchar
+                0x00001290                sys_putstr
+ .text          0x000012b0      0x56c /tmp/ccq9blHH.o
+                0x000012b0                qspi_init
+                0x0000133c                qspi_write_8
+                0x00001370                qspi_write_8_cs
+                0x0000139c                qspi_write_16
+                0x000013c8                qspi_write_16_cs
+                0x000013f4                qspi_write_32
+                0x0000141c                qspi_write_32_cs
+                0x00001444                qspi_write_32x2
+                0x00001470                qspi_write_32x8
+                0x000014b4                qspi_write_32x8_cs
+                0x000014fc                qspi_write_32x16
+                0x00001580                qspi_write_32x16_cs
+                0x00001608                qspi_write_32x32
+                0x00001710                qspi_write_32x32_cs
+ .text          0x0000181c      0x2a4 /tmp/cc8P72NT.o
+                0x000018b8                i2c_init
+                0x000018d4                i2c_write_nbyte
+                0x00001990                i2c_read_nbyte
+ .text          0x00001ac0      0xc08 /tmp/ccSBQSxh.o
+                0x00001ac0                st7735_wr_data8
+                0x00001af0                st7735_wr_data16
+                0x00001b20                st7735_wr_data32
+                0x00001b50                st7735_wr_data32x2
+                0x00001b88                st7735_wr_data32x8
+                0x00001bfc                st7735_wr_data32x16
+                0x00001cf0                st7735_wr_data32x32
+                0x00001ed4                st7735_wr_cmd
+                0x00001f04                st7735_addr_set
+                0x00001fc4                st7735_fill
+                0x000020f8                st7735_init
+                0x00002574                st7735_fill_img
+ .text          0x000026c8      0xc0c /tmp/ccwngeKF.o
+                0x000026c8                st7789_wr_data8
+                0x000026f8                st7789_wr_data16
+                0x00002728                st7789_wr_data32
+                0x00002758                st7789_wr_data32x2
+                0x00002790                st7789_wr_data32x8
+                0x00002804                st7789_wr_data32x16
+                0x000028f8                st7789_wr_data32x32
+                0x00002adc                st7789_wr_cmd
+                0x00002b0c                st7789_init
+                0x00002e4c                st7789_addr_set
+                0x00003038                st7789_fill
+                0x00003158                st7789_fill_img
+ .text          0x000032d4      0x47c /tmp/ccO3gpKL.o
+                0x00003300                sgp30_read_serial_id
+                0x000033d0                sgp30_read_feature_set
+                0x00003450                sgp30_init_air_quality
+                0x00003484                sgp30_measure_air_quality
+                0x0000353c                sgp30_get_baseline
+                0x000035f4                sgp30_set_baseline
+                0x00003678                sgp30_set_humidity
+                0x000036c8                sgp30_measure_test
+ *(.text*)
+ .text.startup  0x00003750      0x26c /tmp/cc4Ff3yb.o
+                0x00003750                main
+ *(.rodata)
+ *fill*         0x000039bc        0x4 
+ .rodata        0x000039c0       0xc0 /tmp/cc4Ff3yb.o
+                0x000039c0                SIN_TABLE_128
+                0x00003a44                MEL_BIN_POINTS
+ .rodata        0x00003a80    0x299ac /tmp/cckWkpLX.o
+                0x00003a80                close_test_pcm
+                0x0000de00                open_test_pcm
+                0x00017700                close_pcm
+                0x00022840                open_pcm
+ .rodata        0x0002d42c       0x58 /tmp/ccL7iCJM.o
+ .rodata        0x0002d484      0x100 /tmp/ccO3gpKL.o
+ *(.rodata*)
+ .rodata.str1.4
+                0x0002d584      0x277 /tmp/cc4Ff3yb.o
+                                0x152 (size before relaxing)
+ .rodata.str1.4
+                0x0002d7fb        0x0 /tmp/ccL7iCJM.o
+                                 0x2f (size before relaxing)
+ .rodata.str1.4
+                0x0002d7fb        0x0 /tmp/ccq9blHH.o
+                                 0x49 (size before relaxing)
+ .rodata.str1.4
+                0x0002d7fb        0x0 /tmp/cc8P72NT.o
+                                 0x47 (size before relaxing)
+ .rodata.str1.4
+                0x0002d7fb        0x0 /tmp/ccSBQSxh.o
+                                 0x5f (size before relaxing)
+ *(.srodata)
+ *fill*         0x0002d7fb        0x1 
+ .srodata       0x0002d7fc       0x10 /tmp/cckWkpLX.o
+                0x0002d7fc                close_test_pcm_len
+                0x0002d800                open_test_pcm_len
+                0x0002d804                close_pcm_len
+                0x0002d808                open_pcm_len
+ *(.srodata*)
+                0x0002d80c                        . = ALIGN (0x4)
+                0x0002d80c                        _etext = .
+                0x0002d80c                        _sidata = _etext
+
+.rela.dyn       0x0002d80c        0x0
+ .rela.text     0x0002d80c        0x0 /tmp/ccHdlMlF.o
+
+.data           0x30000000        0x0 load address 0x0002d80c
+                0x30000000                        . = ALIGN (0x4)
+                0x30000000                        _sdata = .
+                0x30000000                        _ram_start = .
+                0x30000000                        . = ALIGN (0x4)
+ *(.data)
+ .data          0x30000000        0x0 /tmp/ccHdlMlF.o
+ .data          0x30000000        0x0 /tmp/cc4Ff3yb.o
+ .data          0x30000000        0x0 /tmp/cckWkpLX.o
+ .data          0x30000000        0x0 /tmp/cc3oZzJz.o
+ .data          0x30000000        0x0 /tmp/ccKNCyPl.o
+ .data          0x30000000        0x0 /tmp/cciq4Q0C.o
+ .data          0x30000000        0x0 /tmp/ccVqiP2I.o
+ .data          0x30000000        0x0 /tmp/ccL7iCJM.o
+ .data          0x30000000        0x0 /tmp/cc3nKGuy.o
+ .data          0x30000000        0x0 /tmp/ccZKTwx0.o
+ .data          0x30000000        0x0 /tmp/cco372am.o
+ .data          0x30000000        0x0 /tmp/ccsp4re1.o
+ .data          0x30000000        0x0 /tmp/ccq9blHH.o
+ .data          0x30000000        0x0 /tmp/cc8P72NT.o
+ .data          0x30000000        0x0 /tmp/ccSBQSxh.o
+ .data          0x30000000        0x0 /tmp/ccwngeKF.o
+ .data          0x30000000        0x0 /tmp/ccO3gpKL.o
+ *(.data*)
+ *(.sdata)
+ *(.sdata*)
+                0x30000000                        . = ALIGN (0x4)
+                0x30000000                        _edata = .
+
+.bss            0x30000000    0x17d04 load address 0x0002d80c
+                0x30000000                        . = ALIGN (0x4)
+                0x30000000                        _sbss = .
+ *(.bss)
+ .bss           0x30000000        0x0 /tmp/ccHdlMlF.o
+ .bss           0x30000000    0x17d00 /tmp/cc4Ff3yb.o
+ .bss           0x30017d00        0x0 /tmp/cckWkpLX.o
+ .bss           0x30017d00        0x0 /tmp/cc3oZzJz.o
+ .bss           0x30017d00        0x0 /tmp/ccKNCyPl.o
+ .bss           0x30017d00        0x0 /tmp/cciq4Q0C.o
+ .bss           0x30017d00        0x0 /tmp/ccVqiP2I.o
+ .bss           0x30017d00        0x0 /tmp/ccL7iCJM.o
+ .bss           0x30017d00        0x0 /tmp/cc3nKGuy.o
+ .bss           0x30017d00        0x0 /tmp/ccZKTwx0.o
+ .bss           0x30017d00        0x0 /tmp/cco372am.o
+ .bss           0x30017d00        0x0 /tmp/ccsp4re1.o
+ .bss           0x30017d00        0x0 /tmp/ccq9blHH.o
+ .bss           0x30017d00        0x0 /tmp/cc8P72NT.o
+ .bss           0x30017d00        0x0 /tmp/ccSBQSxh.o
+ .bss           0x30017d00        0x0 /tmp/ccwngeKF.o
+ .bss           0x30017d00        0x0 /tmp/ccO3gpKL.o
+ *(.bss*)
+ *(.sbss)
+ .sbss          0x30017d00        0x4 /tmp/cc4Ff3yb.o
+ *(.sbss*)
+ *(COMMON)
+                0x30017d04                        . = ALIGN (0x4)
+                0x30017d04                        _ebss = .
+
+.heap           0x30017d04        0x0
+                0x30017d04                        . = ALIGN (0x4)
+                0x30017d04                        _heap_start = .
+
+.stack_dummy    0x30020000        0x0
+                0x30020000                        PROVIDE (_stack_point = .)
+LOAD /tmp/ccHdlMlF.o
+LOAD /tmp/cc4Ff3yb.o
+LOAD /tmp/cckWkpLX.o
+LOAD /tmp/cc3oZzJz.o
+LOAD /tmp/ccKNCyPl.o
+LOAD /tmp/cciq4Q0C.o
+LOAD /tmp/ccVqiP2I.o
+LOAD /tmp/ccL7iCJM.o
+LOAD /tmp/cc3nKGuy.o
+LOAD /tmp/ccZKTwx0.o
+LOAD /tmp/cco372am.o
+LOAD /tmp/ccsp4re1.o
+LOAD /tmp/ccq9blHH.o
+LOAD /tmp/cc8P72NT.o
+LOAD /tmp/ccSBQSxh.o
+LOAD /tmp/ccwngeKF.o
+LOAD /tmp/ccO3gpKL.o
+OUTPUT(build/retrosoc_fw elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x2a
+ .riscv.attributes
+                0x00000000       0x28 /tmp/ccHdlMlF.o
+ .riscv.attributes
+                0x00000028       0x2a /tmp/cc4Ff3yb.o
+ .riscv.attributes
+                0x00000052       0x2a /tmp/cckWkpLX.o
+ .riscv.attributes
+                0x0000007c       0x2a /tmp/cc3oZzJz.o
+ .riscv.attributes
+                0x000000a6       0x2a /tmp/ccKNCyPl.o
+ .riscv.attributes
+                0x000000d0       0x2a /tmp/cciq4Q0C.o
+ .riscv.attributes
+                0x000000fa       0x2a /tmp/ccVqiP2I.o
+ .riscv.attributes
+                0x00000124       0x2a /tmp/ccL7iCJM.o
+ .riscv.attributes
+                0x0000014e       0x2a /tmp/cc3nKGuy.o
+ .riscv.attributes
+                0x00000178       0x2a /tmp/ccZKTwx0.o
+ .riscv.attributes
+                0x000001a2       0x2a /tmp/cco372am.o
+ .riscv.attributes
+                0x000001cc       0x2a /tmp/ccsp4re1.o
+ .riscv.attributes
+                0x000001f6       0x2a /tmp/ccq9blHH.o
+ .riscv.attributes
+                0x00000220       0x2a /tmp/cc8P72NT.o
+ .riscv.attributes
+                0x0000024a       0x2a /tmp/ccSBQSxh.o
+ .riscv.attributes
+                0x00000274       0x2a /tmp/ccwngeKF.o
+ .riscv.attributes
+                0x0000029e       0x2a /tmp/ccO3gpKL.o
+
+.comment        0x00000000       0x19
+ .comment       0x00000000       0x19 /tmp/cc4Ff3yb.o
+                                 0x1a (size before relaxing)
+ .comment       0x00000019        0x0 /tmp/cckWkpLX.o
+                                 0x1a (size before relaxing)
+ .comment       0x00000019        0x0 /tmp/cc3oZzJz.o
+                                 0x1a (size before relaxing)
+ .comment       0x00000019        0x0 /tmp/ccKNCyPl.o
+                                 0x1a (size before relaxing)
+ .comment       0x00000019        0x0 /tmp/cciq4Q0C.o
+                                 0x1a (size before relaxing)
+ .comment       0x00000019        0x0 /tmp/ccVqiP2I.o
+                                 0x1a (size before relaxing)
+ .comment       0x00000019        0x0 /tmp/ccL7iCJM.o
+                                 0x1a (size before relaxing)
+ .comment       0x00000019        0x0 /tmp/cc3nKGuy.o
+                                 0x1a (size before relaxing)
+ .comment       0x00000019        0x0 /tmp/ccZKTwx0.o
+                                 0x1a (size before relaxing)
+ .comment       0x00000019        0x0 /tmp/cco372am.o
+                                 0x1a (size before relaxing)
+ .comment       0x00000019        0x0 /tmp/ccsp4re1.o
+                                 0x1a (size before relaxing)
+ .comment       0x00000019        0x0 /tmp/ccq9blHH.o
+                                 0x1a (size before relaxing)
+ .comment       0x00000019        0x0 /tmp/cc8P72NT.o
+                                 0x1a (size before relaxing)
+ .comment       0x00000019        0x0 /tmp/ccSBQSxh.o
+                                 0x1a (size before relaxing)
+ .comment       0x00000019        0x0 /tmp/ccwngeKF.o
+                                 0x1a (size before relaxing)
+ .comment       0x00000019        0x0 /tmp/ccO3gpKL.o
+                                 0x1a (size before relaxing)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/cc4Ff3yb.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/cckWkpLX.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/cc3oZzJz.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccKNCyPl.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/cciq4Q0C.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccVqiP2I.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccL7iCJM.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/cc3nKGuy.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccZKTwx0.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/cco372am.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccsp4re1.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccq9blHH.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/cc8P72NT.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccSBQSxh.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccwngeKF.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccO3gpKL.o
+
+Cross Reference Table
+
+Symbol                                            File
+ADC_read                                          /tmp/cc4Ff3yb.o
+MEL_BIN_POINTS                                    /tmp/cc4Ff3yb.o
+SIN_TABLE_128                                     /tmp/cc4Ff3yb.o
+SPI_Get                                           /tmp/cc4Ff3yb.o
+__lshrdi3                                         /tmp/ccKNCyPl.o
+                                                  /tmp/ccVqiP2I.o
+__mulsi3                                          /tmp/cciq4Q0C.o
+_ebss                                             /tmp/ccHdlMlF.o
+_edata                                            /tmp/ccHdlMlF.o
+_sbss                                             /tmp/ccHdlMlF.o
+_sdata                                            /tmp/ccHdlMlF.o
+_sidata                                           /tmp/ccHdlMlF.o
+_stack_point                                      /tmp/ccHdlMlF.o
+adc_init                                          /tmp/cc4Ff3yb.o
+close_pcm                                         /tmp/cckWkpLX.o
+                                                  /tmp/cc4Ff3yb.o
+close_pcm_len                                     /tmp/cckWkpLX.o
+                                                  /tmp/cc4Ff3yb.o
+close_test_pcm                                    /tmp/cckWkpLX.o
+                                                  /tmp/cc4Ff3yb.o
+close_test_pcm_len                                /tmp/cckWkpLX.o
+                                                  /tmp/cc4Ff3yb.o
+delay_ms                                          /tmp/cc3oZzJz.o
+                                                  /tmp/ccO3gpKL.o
+                                                  /tmp/ccwngeKF.o
+                                                  /tmp/ccSBQSxh.o
+delay_s                                           /tmp/cc3oZzJz.o
+delay_us                                          /tmp/cc3oZzJz.o
+get_sys_tick                                      /tmp/cc3oZzJz.o
+gpio_config                                       /tmp/ccVqiP2I.o
+                                                  /tmp/ccSBQSxh.o
+                                                  /tmp/cc4Ff3yb.o
+gpio_get_level                                    /tmp/ccVqiP2I.o
+                                                  /tmp/cc4Ff3yb.o
+gpio_set_direction                                /tmp/ccVqiP2I.o
+gpio_set_function                                 /tmp/ccVqiP2I.o
+gpio_set_level                                    /tmp/ccVqiP2I.o
+                                                  /tmp/ccwngeKF.o
+                                                  /tmp/ccSBQSxh.o
+                                                  /tmp/cc4Ff3yb.o
+hp_uart_config                                    /tmp/cco372am.o
+hp_uart_init                                      /tmp/cco372am.o
+hp_uart_recv                                      /tmp/cco372am.o
+hp_uart_recv_str                                  /tmp/cco372am.o
+hp_uart_send                                      /tmp/cco372am.o
+hp_uart_send_str                                  /tmp/cco372am.o
+i2c_init                                          /tmp/cc8P72NT.o
+i2c_read_nbyte                                    /tmp/cc8P72NT.o
+                                                  /tmp/ccO3gpKL.o
+i2c_write_nbyte                                   /tmp/cc8P72NT.o
+                                                  /tmp/ccO3gpKL.o
+main                                              /tmp/cc4Ff3yb.o
+                                                  /tmp/ccHdlMlF.o
+memcpy                                            /tmp/cc3nKGuy.o
+                                                  /tmp/cc4Ff3yb.o
+memset                                            /tmp/cc3nKGuy.o
+                                                  /tmp/cc4Ff3yb.o
+open_pcm                                          /tmp/cckWkpLX.o
+                                                  /tmp/cc4Ff3yb.o
+open_pcm_len                                      /tmp/cckWkpLX.o
+                                                  /tmp/cc4Ff3yb.o
+open_test_pcm                                     /tmp/cckWkpLX.o
+                                                  /tmp/cc4Ff3yb.o
+open_test_pcm_len                                 /tmp/cckWkpLX.o
+                                                  /tmp/cc4Ff3yb.o
+printf                                            /tmp/ccL7iCJM.o
+                                                  /tmp/ccSBQSxh.o
+                                                  /tmp/cc8P72NT.o
+                                                  /tmp/ccq9blHH.o
+                                                  /tmp/cc4Ff3yb.o
+pwm_init                                          /tmp/ccZKTwx0.o
+pwm_set_compare                                   /tmp/ccZKTwx0.o
+qspi_init                                         /tmp/ccq9blHH.o
+                                                  /tmp/cc4Ff3yb.o
+qspi_write_16                                     /tmp/ccq9blHH.o
+                                                  /tmp/ccwngeKF.o
+                                                  /tmp/ccSBQSxh.o
+qspi_write_16_cs                                  /tmp/ccq9blHH.o
+qspi_write_32                                     /tmp/ccq9blHH.o
+                                                  /tmp/ccwngeKF.o
+                                                  /tmp/ccSBQSxh.o
+qspi_write_32_cs                                  /tmp/ccq9blHH.o
+qspi_write_32x16                                  /tmp/ccq9blHH.o
+                                                  /tmp/ccwngeKF.o
+                                                  /tmp/ccSBQSxh.o
+qspi_write_32x16_cs                               /tmp/ccq9blHH.o
+qspi_write_32x2                                   /tmp/ccq9blHH.o
+                                                  /tmp/ccwngeKF.o
+                                                  /tmp/ccSBQSxh.o
+qspi_write_32x32                                  /tmp/ccq9blHH.o
+                                                  /tmp/ccwngeKF.o
+                                                  /tmp/ccSBQSxh.o
+qspi_write_32x32_cs                               /tmp/ccq9blHH.o
+qspi_write_32x8                                   /tmp/ccq9blHH.o
+                                                  /tmp/ccwngeKF.o
+                                                  /tmp/ccSBQSxh.o
+qspi_write_32x8_cs                                /tmp/ccq9blHH.o
+qspi_write_8                                      /tmp/ccq9blHH.o
+                                                  /tmp/ccwngeKF.o
+                                                  /tmp/ccSBQSxh.o
+qspi_write_8_cs                                   /tmp/ccq9blHH.o
+sgp30_get_baseline                                /tmp/ccO3gpKL.o
+sgp30_init_air_quality                            /tmp/ccO3gpKL.o
+sgp30_measure_air_quality                         /tmp/ccO3gpKL.o
+sgp30_measure_test                                /tmp/ccO3gpKL.o
+sgp30_read_feature_set                            /tmp/ccO3gpKL.o
+sgp30_read_serial_id                              /tmp/ccO3gpKL.o
+sgp30_set_baseline                                /tmp/ccO3gpKL.o
+sgp30_set_humidity                                /tmp/ccO3gpKL.o
+st7735_addr_set                                   /tmp/ccSBQSxh.o
+st7735_fill                                       /tmp/ccSBQSxh.o
+st7735_fill_img                                   /tmp/ccSBQSxh.o
+st7735_init                                       /tmp/ccSBQSxh.o
+st7735_wr_cmd                                     /tmp/ccSBQSxh.o
+st7735_wr_data16                                  /tmp/ccSBQSxh.o
+st7735_wr_data32                                  /tmp/ccSBQSxh.o
+st7735_wr_data32x16                               /tmp/ccSBQSxh.o
+st7735_wr_data32x2                                /tmp/ccSBQSxh.o
+st7735_wr_data32x32                               /tmp/ccSBQSxh.o
+st7735_wr_data32x8                                /tmp/ccSBQSxh.o
+st7735_wr_data8                                   /tmp/ccSBQSxh.o
+st7789_addr_set                                   /tmp/ccwngeKF.o
+st7789_fill                                       /tmp/ccwngeKF.o
+st7789_fill_img                                   /tmp/ccwngeKF.o
+st7789_init                                       /tmp/ccwngeKF.o
+st7789_wr_cmd                                     /tmp/ccwngeKF.o
+st7789_wr_data16                                  /tmp/ccwngeKF.o
+st7789_wr_data32                                  /tmp/ccwngeKF.o
+st7789_wr_data32x16                               /tmp/ccwngeKF.o
+st7789_wr_data32x2                                /tmp/ccwngeKF.o
+st7789_wr_data32x32                               /tmp/ccwngeKF.o
+st7789_wr_data32x8                                /tmp/ccwngeKF.o
+st7789_wr_data8                                   /tmp/ccwngeKF.o
+strlen                                            /tmp/cc3nKGuy.o
+sys_putchar                                       /tmp/ccsp4re1.o
+                                                  /tmp/ccL7iCJM.o
+sys_putstr                                        /tmp/ccsp4re1.o
+sys_tick_init                                     /tmp/cc3oZzJz.o
+sys_uart_init                                     /tmp/ccsp4re1.o
+                                                  /tmp/cc4Ff3yb.o
+vprintf                                           /tmp/ccL7iCJM.o

@@ -1,0 +1,17 @@
+
+build/retrosoc_fw:     file format elf32-littleriscv
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0002d80c  00000000  00000000  00001000  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  30000000  0002d80c  0002f000  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00017d04  30000000  0002d80c  0002f000  2**2
+                  ALLOC
+  3 .heap         00000000  30017d04  30017d04  0002f000  2**0
+                  CONTENTS
+  4 .riscv.attributes 0000002a  00000000  00000000  0002f000  2**0
+                  CONTENTS, READONLY
+  5 .comment      00000019  00000000  00000000  0002f02a  2**0
+                  CONTENTS, READONLY
